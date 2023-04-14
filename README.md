@@ -5,7 +5,7 @@ Projet des 48 heure de l'equipe 22
 - php8 php-core
 - composer
 - node & npm
-## Command A Lancer
+## Command A Lancer à l'Interieur de Projet
 ```bash
 composer install
 composer update
