@@ -14,7 +14,12 @@ class EventController extends Controller
      */
     public function index()
     {
-        $events = Event::all();
+        $events = Event::where([
+                ['campus_code', '=', auth()->user()->campus_code],
+                ['start_date', '>=', now()]
+            ])
+            ->orderBy('start_date', 'asc')
+            ->get();
         return view('events.index', compact('events'));
     }
 
