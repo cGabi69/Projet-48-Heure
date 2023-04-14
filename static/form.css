@@ -104,29 +104,31 @@ nav li .active:hover {
 }
 
 .addEvent h1 {
-font-family: 'Inter';
-font-style: normal;
-font-weight: 400;
-font-size: 40px;
-color: #449b95;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 40px;
+    color: #449b95;
 }
 
 .formContainer {
     border-radius: 5px;
     background-color: #f2f2f2;
     padding: 20px;
-  margin-top: 30px;
-  }
+    margin-top: 30px;
+}
 
-input[type=text], select, textarea {
+input[type=text],
+select,
+textarea {
     width: 100%;
     padding: 12px;
     border: 1px solid #ccc;
     border-radius: 6px;
     resize: vertical;
-  }
+}
 
-input[type=date] {
+input[type=time] {
     border: 1px solid #ccc;
     border-radius: 6px;
     padding: 12px;
@@ -137,13 +139,13 @@ input[type=time] {
     border-radius: 6px;
     padding: 12px;
 }
-  
-  label {
+
+label {
     padding: 12px 12px 12px 0;
     display: inline-block;
-  }
-  
-  input[type=submit] {
+}
+
+input[type=submit] {
     background-color: #04AA6D;
     color: #fff;
     font-size: larger;
@@ -151,36 +153,39 @@ input[type=time] {
     border: none;
     border-radius: 6px;
     cursor: pointer;
-  }
-  
-  input[type=submit]:hover {
+}
+
+input[type=submit]:hover {
     scale: 1.15;
-  }
-  
-  .col-left {
+}
+
+.col-left {
     float: left;
     width: 25%;
     margin-top: 6px;
     font-size: 22px;
-  }
-  
-  .col-right {
+}
+
+.col-right {
     float: left;
     width: 65%;
     margin-top: 6px;
-  }
-  
-  /* Clear floats after the columns */
-  .row::after {
+}
+
+/* Clear floats after the columns */
+.row::after {
     content: "";
     display: table;
     clear: both;
-  }
-  
-  /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
-  @media screen and (max-width: 600px) {
-    .col-left, .col-right, input[type=submit] {
-      width: 100%;
-      margin-top: 0;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+
+    .col-left,
+    .col-right,
+    input[type=submit] {
+        width: 100%;
+        margin-top: 0;
     }
-  }
+}

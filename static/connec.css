@@ -1,0 +1,20 @@
+*{
+    padding: 0%;
+    margin: 0%;
+}
+
+.paint{
+    display: flexbox;
+    position: absolute;
+    width: 829px;
+    height: 572px;
+    left: calc(50% - 829px/2 + 0.5px);
+    top: calc(50% - 572px/2 + 132px);
+
+    background: #171415;
+    border-radius: 51px;
+}
+
+.rec1{
+
+}
