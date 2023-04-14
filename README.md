@@ -7,6 +7,7 @@ Projet des 48 heure de l'equipe 22
 - node & npm
 ## Command A Lancer
 ```bash
+composer install
 composer update
 composer install
 cp .env.example .env
