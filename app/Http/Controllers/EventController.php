@@ -16,7 +16,7 @@ class EventController extends Controller
     {
         $events = Event::where([
                 ['campus_code', '=', auth()->user()->campus_code],
-                ['start_date', '>=', now()]
+                ['end_date', '>=', now()]
             ])
             ->orderBy('start_date', 'asc')
             ->get();
@@ -41,12 +41,14 @@ class EventController extends Controller
      */
     public function store(Request $request)
     {
+        $request["campus_code"]=auth()->user()->campus_code;
         $validatedData = $request->validate([
             'start_date' => 'required|date',
             'end_date' => 'required|date|after_or_equal:start_date',
             'title' => 'required|max:255',
             'description' => 'nullable',
             'location' => 'nullable|max:255',
+            'campus_code' => 'required|min:4|max:4',
         ]);
 
         $event = new Event($validatedData);

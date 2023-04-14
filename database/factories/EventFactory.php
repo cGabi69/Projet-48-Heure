@@ -31,7 +31,7 @@ class EventFactory extends Factory
             'title' => $this->faker->sentence,
             'description' => $this->faker->paragraph,
             'location' => $this->faker->city,
-            'campus_code' => '0001'
+            'campus_code' => auth()->user()->campus_code
         ];
     }
 }

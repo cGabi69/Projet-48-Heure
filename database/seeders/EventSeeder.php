@@ -20,7 +20,7 @@ class EventSeeder extends Seeder
                 'title' => 'Example Event 1',
                 'description' => 'This is an example event.',
                 'location' => 'New York, NY',
-                'campus_code' => '0001'
+                'campus_code' => auth()->user()->campus_code
             ],
             [
                 'start_date' => '2023-05-01',
@@ -28,7 +28,7 @@ class EventSeeder extends Seeder
                 'title' => 'Example Event 2',
                 'description' => 'This is another example event.',
                 'location' => 'San Francisco, CA',
-                'campus_code' => '0002'
+                'campus_code' => auth()->user()->campus_code
             ],
         ];
 
