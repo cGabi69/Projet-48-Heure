@@ -1,58 +1,99 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <script src="https://kit.fontawesome.com/4f6d94b9cb.js" crossorigin="anonymous"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/form.css">
     <title>formulaire</title>
 </head>
 
 <body>
-
-    <head></head>
-    <h1>Ajouter un évenement</h1>
-    <form method="post" action="">
-        <label for="pseudo"> Nom </label>
-        <input type="text" name="pseudo" id="pseudo" required><br></br>
-
-        <label for="date"> date</label>
-        <input type="date" id="date" name="trip-start" required><br></br>
-
-        <label for="localisation">Localisation</label>
-        <input type="localisation"required> <br></br>
-
-        <label for="hours">Debut de l'évenement</label>
-        <input type="time" id="appt" name="appt" required> <br></br>
-
-        <!-- <div>
-            <input type="checkbox" id="select" name="select">
-            <label for="bar">bar</label>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>CampusConnect</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a class="active" href="#">Accueil</a></li>
+                    <li><a href="#">Planning</a></li>
+                    <li><a href="#">A venir</a></li>
+                    <!-- <li><a href="#">ajouter évenement</a></li> -->
+                </ul>
+            </nav>
+            <div class="user">
+                <a href="#"><i class="fa-regular fa-user fa-beat-fade"></i>S'identifier</a>
+            </div>
         </div>
-        <div>
-            <input type="checkbox" id="select" name="select">
-        <label for="bar">bar</label>
-        </div>
-        <div>
-            <input type="checkbox" id="select" name="select">
-        <label for="bar">bar</label>
-        </div>
-        <div>
-            <input type="checkbox" id="select" name="select">
-        <label for="bar">bar</label>
-        </div>
-        <div>
-            <input type="checkbox" id="select" name="select">
-        <label for="bar">bar</label>
-        </div> -->
-        
+    </header>
 
-        <label for="decription">Description</label>
-        <textarea name="decription" id="desc" cols="30" rows="1"></textarea><br></br>
+    <div class="addEvent">
+        <h1>Ajouter un évenement</h1>
+    </div>
 
-        <button class="valide" name="Valide" value="">Ajoute l'évenement</button>
-    </form>
-
+    <div class="formContainer">
+        <form action="">
+            <div class="row">
+                <div class="col-left">
+                    <label for="fname">Intitulé</label>
+                </div>
+                <div class="col-right">
+                    <input type="text" id="fname" name="firstname" placeholder="Intitulé de l'événement/activité"
+                        required>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-left">
+                    <label for="lname">Date</label>
+                </div>
+                <div class="col-right">
+                    <input type="date" id="date" name="date" required placeholder="Sélectionnez une date..">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-left">
+                    <label for="heure_debut">Heure de début</label>
+                </div>
+                <div class="col-right">
+                    <input type="time" id="heure_debut" name="heure_debut" required
+                        placeholder="Sélectionnez une heure..">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-left">
+                    <label for="subject">Fin de l'événement</label>
+                </div>
+                <div class="col-right">
+                    <input type="time" id="heure_fin" name="heure_fin" required placeholder="Sélectionnez une heure..">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-left">
+                    <label for="subject">Localisation</label>
+                </div>
+                <div class="col-right">
+                    <input type="text" id="localisation" name="localisation" required
+                        placeholder="Renseignez le lieux..">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-left">
+                    <label for="subject">Description</label>
+                </div>
+                <div class="col-right">
+                    <textarea id="subject" name="subject" required placeholder="Ajoutez une description.."
+                        style="height:200px"></textarea>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <input type="submit" value="Ajouter">
+            </div>
+        </form>
+    </div>
 </body>
 
 </html>
