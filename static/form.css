@@ -1,0 +1,191 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #d83e55;
+    height: 90px;
+    max-width: 100%;
+    font-family: 'Raleway', sans-serif;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    padding: 0;
+}
+
+.logo h1 {
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    margin-right: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+nav li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav li a {
+    display: block;
+    margin: 0 20px;
+    color: #fff;
+    font-size: 18px;
+    text-decoration: none;
+    line-height: 30px;
+    padding: 8px;
+    border-radius: 12px;
+}
+
+nav li a:hover {
+    scale: 1.15;
+    color: #449b95;
+}
+
+nav li .active {
+    background-color: #449b95;
+}
+
+nav li .active:hover {
+    scale: 1.15;
+    color: #fff;
+}
+
+.user {
+    display: flex;
+    align-items: center;
+}
+
+.user a {
+    display: flex;
+    align-items: center;
+    color: #fff;
+    font-size: 18px;
+    text-decoration: none;
+    margin-right: 10px;
+}
+
+.user a:hover {
+    color: #449b95;
+    scale: 1.15;
+}
+
+.user i {
+    margin-right: 10px;
+    font-size: 18px;
+}
+
+.addEvent {
+    color: #000000;
+    margin: auto;
+    margin-top: 50px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+
+.addEvent h1 {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 40px;
+    color: #449b95;
+}
+
+.formContainer {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+    margin-top: 30px;
+}
+
+input[type=text],
+select,
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    resize: vertical;
+}
+
+input[type=time] {
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    padding: 12px;
+}
+
+input[type=time] {
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    padding: 12px;
+}
+
+label {
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+}
+
+input[type=submit] {
+    background-color: #04AA6D;
+    color: #fff;
+    font-size: larger;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    scale: 1.15;
+}
+
+.col-left {
+    float: left;
+    width: 25%;
+    margin-top: 6px;
+    font-size: 22px;
+}
+
+.col-right {
+    float: left;
+    width: 65%;
+    margin-top: 6px;
+}
+
+/* Clear floats after the columns */
+.row::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+
+    .col-left,
+    .col-right,
+    input[type=submit] {
+        width: 100%;
+        margin-top: 0;
+    }
+}
