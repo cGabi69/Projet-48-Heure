@@ -4,6 +4,7 @@ Projet des 48 heure de l'equipe 22
 ## Requirement
 - php8 php-core
 - composer
+- node & npm
 ## Command A Lancer
 ```bash
 composer update
