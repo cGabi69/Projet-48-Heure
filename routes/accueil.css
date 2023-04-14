@@ -94,10 +94,6 @@ nav li .active:hover {
     font-size: 18px;
 }
 
-body {
-    background-color: #000;
-}
-
 .mainText {
     margin-top: 80px;
     line-height: 50px;
@@ -109,7 +105,7 @@ body {
     line-height: 1.5;
     display: inline-block;
     vertical-align: middle;
-    color: #fff;
+    color: #000;
 }
 
 .miniText {
@@ -122,19 +118,12 @@ body {
     line-height: 1.5;
     display: inline-block;
     vertical-align: middle;
-    color: #fff;
+    color: #000;
 }
-/*
-.imgCarousel {
-    margin-top: 50px;
-    border: 2px solid #449b95;
-    color: #fff;
-    margin-top: 80px;
-    line-height: 50px;
-    height: 50px;
-    text-align: center;
+
+.carouselContainer {
+    height: 400px;
 }
-*/
 
 /*Basic structure of slider*/
 .imgCarouselContainer{
@@ -142,64 +131,44 @@ body {
     width: 500px;
     position: absolute;
     transform: translate(-50%,-50%);
-    top: 50%;
+    top: 55%;
     left: 50%;
     overflow: hidden;
     border-radius: 12px;
 }
 
 /*Area of images*/
-.wrapper{
+.wrapper {
     width: 100%;
     display: flex;
-    animation: slide 16s infinite;
+    animation: slide 12s infinite;
 }
 
-img{
+img {
     width: 100%;
 }
+
 /*Animation activated by keyframes*/
-@keyframes slide{
-    0%{
+@keyframes slide {
+    0% {
         transform: translateX(0);
     }
-    25%{
+    20% {
         transform: translateX(0);
     }
-    30%{
+    40% {
         transform: translateX(-100%);
     }
-    50%{
+    60% {
         transform: translateX(-100%);
     }
-    55%{
+    80% {
         transform: translateX(-200%);
     }
-    75%{
-        transform: translateX(-200%);
-    }
-    80%{
-        transform: translateX(-300%);
-    }
-    100%{
-        transform: translateX(-300%);
+    100% {
+        transform: translateX(0%);
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 .footer {
     margin-top: 60px;
@@ -209,7 +178,7 @@ img{
 }
 
 .footer p {
-    color: #fff;
+    color: #000;
     letter-spacing: 1.3px;
     font-size: 15px;
     font-weight: 600;
