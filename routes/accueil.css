@@ -1,0 +1,216 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #d83e55;
+    height: 90px;
+    max-width: 100%;
+    font-family: 'Raleway', sans-serif;
+}
+  
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    padding: 0;
+}
+
+.logo h1 {
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+}
+  
+nav ul {
+    margin: 0;
+    padding: 0;
+    margin-right: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+  
+nav li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+  
+nav li a {
+    display: block;
+    margin: 0 20px;
+    color: #fff;
+    font-size: 18px;
+    text-decoration: none;
+    line-height: 30px;
+    padding: 8px;
+    border-radius: 12px;
+}
+
+nav li a:hover {
+    scale: 1.15;
+    color: #449b95;
+}
+
+nav li .active {
+    background-color: #449b95;
+}
+
+nav li .active:hover {
+    scale: 1.15;
+    color: #fff;
+}
+  
+.user {
+    display: flex;
+    align-items: center;
+}
+  
+.user a {
+    display: flex;
+    align-items: center;
+    color: #fff;
+    font-size: 18px;
+    text-decoration: none;
+    margin-right: 10px;
+}
+
+.user a:hover {
+    color: #449b95;
+    scale: 1.15;
+}
+  
+.user i {
+    margin-right: 10px;
+    font-size: 18px;
+}
+
+body {
+    background-color: #000;
+}
+
+.mainText {
+    margin-top: 80px;
+    line-height: 50px;
+    height: 50px;
+    text-align: center;
+}
+
+.mainText h2 {
+    line-height: 1.5;
+    display: inline-block;
+    vertical-align: middle;
+    color: #fff;
+}
+
+.miniText {
+    line-height: 50px;
+    height: 50px;
+    text-align: center;
+}
+
+.miniText h3 {
+    line-height: 1.5;
+    display: inline-block;
+    vertical-align: middle;
+    color: #fff;
+}
+/*
+.imgCarousel {
+    margin-top: 50px;
+    border: 2px solid #449b95;
+    color: #fff;
+    margin-top: 80px;
+    line-height: 50px;
+    height: 50px;
+    text-align: center;
+}
+*/
+
+/*Basic structure of slider*/
+.imgCarouselContainer{
+    margin-top: 50px;
+    width: 500px;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 50%;
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+/*Area of images*/
+.wrapper{
+    width: 100%;
+    display: flex;
+    animation: slide 16s infinite;
+}
+
+img{
+    width: 100%;
+}
+/*Animation activated by keyframes*/
+@keyframes slide{
+    0%{
+        transform: translateX(0);
+    }
+    25%{
+        transform: translateX(0);
+    }
+    30%{
+        transform: translateX(-100%);
+    }
+    50%{
+        transform: translateX(-100%);
+    }
+    55%{
+        transform: translateX(-200%);
+    }
+    75%{
+        transform: translateX(-200%);
+    }
+    80%{
+        transform: translateX(-300%);
+    }
+    100%{
+        transform: translateX(-300%);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.footer {
+    margin-top: 60px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+
+.footer p {
+    color: #fff;
+    letter-spacing: 1.3px;
+    font-size: 15px;
+    font-weight: 600;
+}
