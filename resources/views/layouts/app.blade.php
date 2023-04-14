@@ -49,6 +49,14 @@
                                 </li>
                             @endif
                         @else
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('events.index') }}">{{ __('Upcomming Events') }}</a>
+                            </li>
+                            @if(Auth::user()->role!='user')
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('events.create') }}">{{ __('Create Event') }}</a>
+                            </li>
+                            @endif
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     {{ Auth::user()->name }}
@@ -66,15 +74,6 @@
                                     </form>
                                 </div>
                             </li>
-
-                            <li class="nav-item">
-                                <a class="nav-link" href="{{ route('events.index') }}">{{ __('Events') }}</a>
-                            </li>
-                            @if(Auth::user()->role!='user')
-                            <li class="nav-item">
-                                <a class="nav-link" href="{{ route('events.create') }}">{{ __('Create Event') }}</a>
-                            </li>
-                            @endif
                         @endguest
                     </ul>
                 </div>

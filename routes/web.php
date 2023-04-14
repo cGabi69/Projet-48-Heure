@@ -42,6 +42,7 @@ Route::middleware(['auth'])->group(function () {
         Route::get('/{event}/edit', [App\Http\Controllers\EventController::class, 'edit'])->name('events.edit');
         Route::put('/{event}/update', [App\Http\Controllers\EventController::class, 'update'])->name('events.update');
         Route::delete('/{event}', [App\Http\Controllers\EventController::class, 'destroy'])->name('events.destroy');
+        Route::get('/all', [App\Http\Controllers\EventController::class, 'getall'])->name('events.get');
     });
     
 
