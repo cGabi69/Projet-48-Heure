@@ -27,14 +27,14 @@
         </div>
         <div>
             <label for="start_date">Start date</label>
-            <input type="date" name="start_date" id="start_date" value="{{ old('start_date') }}">
+            <input type="datetime-local" name="start_date" id="start_date" value="{{ old('start_date') }}">
             @error('start_date')
                 <div>{{ $message }}</div>
             @enderror
         </div>
         <div>
             <label for="end_date">End date</label>
-            <input type="date" name="end_date" id="end_date" value="{{ old('end_date') }}">
+            <input type="datetime-local" name="end_date" id="end_date" value="{{ old('end_date') }}">
             @error('end_date')
                 <div>{{ $message }}</div>
             @enderror

@@ -70,9 +70,11 @@
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ route('events.index') }}">{{ __('Events') }}</a>
                             </li>
+                            @if(Auth::user()->role!='user')
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ route('events.create') }}">{{ __('Create Event') }}</a>
                             </li>
+                            @endif
                         @endguest
                     </ul>
                 </div>

@@ -16,6 +16,7 @@ class Event extends Model
         'title',
         'description',
         'location',
+        'campus_code'
     ];
 
     public $timestamps = true;
