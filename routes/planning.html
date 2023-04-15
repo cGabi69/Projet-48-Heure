@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/routes/planning.css">
+    <script src="https://kit.fontawesome.com/4f6d94b9cb.js" crossorigin="anonymous"></script>
+    <title>CampusConnect | Événements & Actualités étudiantes</title>
+</head>
+<body>
+    <header>
+        <div class="container">
+          <div class="logo">
+            <h1>CampusConnect</h1>
+          </div>
+
+          <nav>
+            <ul>
+              <li><a class="active" href="#">Accueil</a></li>
+              <li><a href="#">Planning</a></li>
+              <li><a href="#">A venir</a></li>
+            </ul>
+          </nav>
+
+          <div class="user">
+            <a href="#"><i class="fa-regular fa-user fa-beat-fade"></i>S'identifier</a>
+          </div>
+        </div>
+      </header>
+      
+      <div class="introduction">
+        <h2>Retrouvez ici toute l'actualité.</h2>
+      </div>
+      <label for="date-picker">Choisissez une autre période :</label><br>
+    <input type="date" id="date-picker">
+    <br>
+
+      <div class="planning">
+        <div class="jour" style="grid-column: 2;">Lundi</div>
+        <div class="jour" style="grid-column: 3;">Mardi</div>
+        <div class="jour" style="grid-column: 4;">Mercredi</div>
+        <div class="jour" style="grid-column: 5;">Jeudi</div>
+        <div class="jour" style="grid-column: 6;">Vendredi</div>
+        <div class="jour" style="grid-column: 7;">Samedi</div>
+        <div class="jour" style="grid-column: 8;">Dimanche</div>
+    </div>
+
+    <script>
+        const planning = document.querySelector('.planning');
+
+        for (let i = 0; i < 24; i++) {
+          const heureDiv = document.createElement('div');
+          heureDiv.className = 'heure';
+          heureDiv.style.gridRow = i + 2;
+          heureDiv.textContent = `${String(i).padStart(2, '0')}h`;
+          planning.appendChild(heureDiv);
+        }
+
+        for (let i = 2; i <= 8; i++) {
+          for (let j = 2; j <= 25; j++) {
+          const celluleDiv = document.createElement('div');
+          celluleDiv.className = 'cellule';
+          celluleDiv.style.gridColumn = i;
+          celluleDiv.style.gridRow = j;
+          planning.appendChild(celluleDiv);
+          }
+        }
+    </script>
+
+      <div class="footer">
+        <p>© Copyright 2023 | CampusConnect</p>
+    </div>
+</body>
+</html>
